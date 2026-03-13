@@ -1,0 +1,49 @@
+name: Deploy fabrica-games
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: 🚀 Deploy App
+    runs-on: self-hosted
+
+    steps:
+      # ── 1. PREPARAÇÃO ───────────────────────────────────────────────────────
+      - name: 📂 Checkout do Código
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Validar Ambiente e Arquivos
+        run: |
+          echo "Verificando arquivos críticos..."
+          test -f docker-compose.yml || (echo "ERRO: docker-compose.yml não encontrado" && exit 1)
+          
+          echo "Validando sintaxe do Docker Compose..."
+          docker compose config -q
+
+      # ── 2. EXECUÇÃO ─────────────────────────────────────────────────────────
+      - name: 🐳 Atualizar e Subir Containers
+        run: |
+          echo "Puxando imagens novas (se houver)..."
+          docker compose pull --quiet
+          
+          echo "Iniciando serviços..."
+          # --wait: Garante que o step só termine quando o container estiver pronto
+          docker compose up -d --remove-orphans --wait
+
+      # ── 3. MANUTENÇÃO (PÓS-DEPLOY) ──────────────────────────────────────────
+      - name: 📊 Status Final
+        run: |
+          echo "--- Containers Ativos ---"
+          docker compose ps
+          echo "--- Consumo de Recursos ---"
+          docker stats --no-stream fabrica-games
+
+      - name: 🧹 Limpeza de Imagens Antigas
+        if: always()
+        run: |
+          echo "Limpando imagens dangling (sem tag)..."
+          docker image prune -f
