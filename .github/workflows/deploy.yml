@@ -19,7 +19,7 @@ jobs:
       - name: 🛠️ Validar Ambiente e Arquivos
         run: |
           echo "Verificando arquivos críticos..."
-          test -f docker-compose.yml || (echo "ERRO: docker-compose.yml não encontrado" && exit 1)
+          test -f docker-compose.prod.yml || (echo "ERRO: docker-compose.prod.yml não encontrado" && exit 1)
           
           echo "Validando sintaxe do Docker Compose..."
           docker compose config -q

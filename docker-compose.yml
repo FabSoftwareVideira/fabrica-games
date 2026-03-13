@@ -1,25 +1,14 @@
 services:
   web:
     image: busybox:latest
-    container_name: fabrica-games
-    ports:
-      - "4321:80"
+    container_name: fabrica-games-dev
+    # O volume é o que permite você editar o código e ver a mudança na hora
     volumes:
       - ./src:/var/www/html
+    ports:
+      - "8080:80"
     command: >
       /bin/sh -c "
-      busybox httpd -f -p 80 -h /var/www/html
+      echo 'Servidor de DEV rodando em http://localhost:8080' &&
+      busybox httpd -f -vv -p 80 -h /var/www/html
       "
-    restart: always
-    networks:
-      - fabrica-network
-    healthcheck:
-      test: ["CMD", "nc", "-z", "localhost", "80"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 5s
-
-networks:
-  fabrica-network:
-    external: true
