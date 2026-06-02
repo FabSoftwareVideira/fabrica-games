@@ -37,7 +37,7 @@ p {
 }
 
 .escuro-btn{
-    background-image: url(/img/escuro.png);
+    background-image: url(./../../img/escuro.png);
     border: 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ p {
 } 
 
 .claro-btn{
-    background-image: url(/img/claro.png);
+    background-image: url(./../../img/claro.png);
     border: 0;
     margin-right: 17px;
     background-size: contain;

@@ -6,14 +6,14 @@
 
 .body-claro{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("/img/fundo.png");
+    background-image: url("./../../img/fundo.png");
     background-repeat: no-repeat;
     background-size: 1400px;
 }
 
 .body-escuro{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("/img/fundo-escuro.png");
+    background-image: url("./../../img/fundo-escuro.png");
     background-repeat: no-repeat;
     background-size: 1400px;
 }
@@ -72,7 +72,7 @@ footer {
 }
 
 .escuro-btn{
-    background-image: url(/img/escuro.png);
+    background-image: url(./../../img/escuro.png);
     border: 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ footer {
 } 
 
 .claro-btn{
-    background-image: url(/img/claro.png);
+    background-image: url(./../../img/claro.png);
     border: 0;
     margin-right: 17px;
     background-size: contain;
