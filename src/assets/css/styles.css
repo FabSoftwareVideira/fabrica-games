@@ -1,10 +1,186 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {
+.body-claro{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url("/img/fundo.png");
+    background-repeat: no-repeat;
+    background-size: 1400px;
+}
+
+.body-escuro{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("/img/fundo-escuro.png");
+    background-repeat: no-repeat;
+    background-size: 1400px;
+}
+
+.a{
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p {
+    margin-left: 50px;
+}
+
+.nav {
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: #f1f7fc;
+}
+
+.uli {
+    margin-top: 95px;
+    padding: 10px;
+    width: 98%;
+    margin-left: 10px;
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.img {
+
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+
+.icon {
+    width: 40px;
+}
+
+.escuro-btn{
+    background-image: url(/img/escuro.png);
+    border: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: transparent;
+} 
+
+.claro-btn{
+    background-image: url(/img/claro.png);
+    border: 0;
+    margin-right: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: transparent;
+}
+
+.claro{
+    background-color: #004074;
+}
+
+.claro .a{
+    color: #004974;
+}
+
+.escuro{
+    background-color: #1a2438;
+}
+
+.claro-footer{
+    background-color: #004974;
+}
+
+.claro-footer a{
+    color: #69aefd;
+    text-decoration: none;
+}
+
+.claro-footer p{
+    color: white;
     margin: 0;
-    padding: 20px;
+}
+
+.escuro-footer{
+    background-color: #18253d;
+}
+
+.escuro-footer a{
+    color: #6ea8ff;
+    text-decoration: none;
+}
+
+.escuro-footer p{
+    color: white;
+    margin: 0;
+}
+
+.claro-lista{
+    background-color: rgb(255, 255, 255);
+}
+
+.claro-lista h3{
+    border-bottom: 1px solid #cccccc;
+    color: #004974;
+    margin-left: 32px;
+    margin-right: 10px;
+}
+
+.claro-lista li{
+    border-top: 1px solid #cccccc;
+}
+
+.escuro-lista{
+    background-color: #15233a;
+}
+
+.escuro-lista h3{
+    border-bottom: 1px solid #2a3855;
+    color: white;
+    margin-left: 32px;
+    margin-right: 10px;
+}
+
+.escuro-lista h3 strong{
+    margin-left: 12px;
+}
+
+
+.escuro-lista li{
+    border-top: 1px solid #2a3855;
+}
+
+.escuro-lista li{
+    color: white;
+}
+
+.claro-div{
+    color: black;
+}
+
+.claro-div h1{
+    color: #004974;
+}
+
+.escuro-div{
+    color: white;
+}
+
+.escuro-div h1{
+    color: white;
 }

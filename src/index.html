@@ -4,28 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Aulas, Fundamentos da computação, tecnologias assitivas, ifc, ifc Videira">
     <title>Games | Fábrica de Software - IFC Videira</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <h1>Olá Mundo</h1>
-    <p>Site para o estágio do aluno Iuri</p>
+<body id="tema2" class="body-claro">
+    <header class="nav navbar claro" id="tema1">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Fundamentos da Computação</a>
 
-    <p>Organização de uma projeto web estático</p>
+            <button onclick="alterarClass()" id="btn" class="rounded-4 ms-auto claro-btn">Tema escuro</button>
+    </header>
+    </div>
 
-    <p>Tecnologias Assistivas</p>
+    <div id="tema3">
+        <h1><strong>Olá Mundo</strong></h1>
+        <p> <img src="img/pc.png" alt="icon pc" class="icon"> Tecnologias Assistivas</p>
+        <p><img src="img/pasta.png" alt="pasta" class="icon"> Organização de uma projeto web estático</p>
+    </div>
 
-    <p>Aulas de Fundamentos da Computação</p>
+    <div class="uli claro-lista" id="tema4">
+        <h3><img src="img/aula.png" class="icon" alt=""><strong>Aulas de Fundamentos da Computação</strong></h3>
 
-    <ul>
-        <li>Aula 01 <a href="aula01.html">aqui</a></li>
-        <li>Aula 02 <a href="aula02.html">aqui</a></li>
-        <li>Aula 03 <a href="aula03.html">aqui</a></li>
-        <li>Aula 04 <a href="aula04.html">aqui</a></li>
-        <li>Aula 05 <a href="aula05.html">aqui</a></li>
-        <li>Aula 06 <a href="aula06.html">aqui</a></li>
-    </ul>
+        <ul>
+
+            <li>Aula 01 <a href="aula01.html">aqui</a></li>
+            <li>Aula 02 <a href="aula02.html">aqui</a></li>
+            <li>Aula 03 <a href="aula03.html">aqui</a></li>
+            <li>Aula 04 <a href="aula04.html">aqui</a></li>
+            <li>Aula 05 <a href="aula05.html">aqui</a></li>
+            <li>Aula 06 <a href="aula06.html">aqui</a></li>
+        </ul>
+    </div>
+
+    <footer class="fixed-bottom claro-footer" id="tema5">
+        <p>Site para o estágio do aluno Iuri</p>
+        <p>Projeto educacional desenvolvido na <a href="https://fabrica.videira.ifc.edu.br/">Fábrica de Software - IFC
+                Videira</a></p>
+    </footer>
+
+    <script src="java.js"></script>
 </body>
 
 </html>
